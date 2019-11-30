@@ -7,18 +7,20 @@ var path = require('path');
 var port = process.env.PORT || 9000 ;
 
 // Configure Nunjucks
+const pathView = require('../config/paths.json');
 var _templates = process.env.NODE_PATH ? process.env.NODE_PATH + '/templates' : 'templates' ;
 var _templates = [
   '',
   'node_modules/lbh-frontend/lbh/',
   'node_modules/lbh-frontend/lbh/components/',
   'node_modules/govuk-frontend/govuk/',
-  'node_modules/govuk-frontend/govuk/components/'
+  'node_modules/govuk-frontend/govuk/components/',
+  pathView.views
 ];
 nunjucks.configure( _templates, {
     autoescape: true,
     cache: false,
-    express: app
+    express: app,
 } ) ;
 // Set Nunjucks as rendering engine for pages with .html suffix
 app.engine( 'html', nunjucks.render ) ;

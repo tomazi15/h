@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="/public/app.css">
+{% from "lbh-cookie-banner/macro.njk" import lbhCookieBanner %}
+{% from "lbh-header/macro.njk" import lbhHeader %}
+{% from "lbh-button/macro.njk" import lbhButton %}
+{% from "../components/lbh-image/macro.njk" import lbhImage %}
+
+{% block beforeContent %}
+  {{ lbhCookieBanner({
+    content: '<p>We use cookies to ensure you have the best experience. For full details see our <a href="#">Cookie policy</a>.</p>'
+  }) }}
+
+{{ lbhHeader({
+  "isHome": true,
+  "homepageUrl": "/"
+}) }}
+  <!-- Phase banner goes here -->
+  <!-- Announcements go here -->
+  <!-- Breadcrumbs go here -->
+{% endblock %}
+{% block content %}
+<div class="lbh-container">
+    <h1>HELLO HACKNEY TEST</h1>
+    
+    <div class="lbh-paragraph">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+
+  <!-- Page components go here -->
+    {# <p class="lbh-body-m">Here is some text, if you like it click here:</p> #}
+    {{ lbhButton({
+      element: "button",
+      text: "I do nothing",
+      name: "button-one",
+      type: "submit"
+    }) }}
+
+    {{ lbhImage ({
+        src: "https://www.outsystems.com/-/media/images/company/news/prs/hackney-council-enhanced-digital-services/hackney-logo-white.png?w=280&la=en",
+        alt: "london borough of hackney logo",
+        caption: "my first caption"
+    }) }}
+
+<script src="/public/main.js"></script>
+
+</div>
+{% endblock %}
+

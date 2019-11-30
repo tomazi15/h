@@ -1,6 +1,6 @@
 {
   "app": "app/",
-    "views": "app/views/",
+    "views": "app/assets/views/",
       "examples": "app/views/examples/",
       "fullPageExamples": "app/views/full-page-examples/",
       "partials": "app/views/partials/",

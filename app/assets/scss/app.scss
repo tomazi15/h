@@ -1,0 +1,21 @@
+@import "node_modules/lbh-frontend/lbh/all";
+
+html {
+    margin-top: -25px;
+}
+
+.lbh-paragraph {
+    margin-bottom: 24px;    
+}
+
+.lbh-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__image {
+      background-color: black;
+      padding: 10px;
+      border-radius: 20px;
+    }
+}

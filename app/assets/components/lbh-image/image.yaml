@@ -1,0 +1,13 @@
+params:
+- name: src
+  type: string
+  required: true
+  description: hello `image` test component
+- name: alt
+  type: string
+  required: true
+  description: hello `image` test alt
+- name: caption
+  type: string
+  required: true
+  description: hello `image` caption
